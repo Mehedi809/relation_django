@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block cross %}
+<h1>{{ product.name }}</h1>
+<p>Categories:</p>
+<ul>
+{% for category in product.categories.all %}
+    <li>{{ category.name }}</li>
+{% endfor %}
+</ul>
+<p>Tags:</p>
+<ul>
+{% for tag in product.tags.all %}
+    <li>{{ tag.name }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
